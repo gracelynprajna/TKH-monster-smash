@@ -45,9 +45,9 @@ function playRound(){
 
 function playGame(){
     alert(`Hello ${playerName}! You are fighting ${monsterName}! 
-    ${playerName} health is ${playerHealth}, and ${monsterName}'s health is ${monsterHealth}!`);
+    ${playerName}'s health is ${playerHealth}, and ${monsterName}'s health is ${monsterHealth}!`);
     let roundNumber = 0;
-        while(playerHealth>=0 || monsterHealth>=0){
+        while(playerHealth>0 && monsterHealth>0){
         roundNumber++;
         alert(`this is round number ${roundNumber}. 
         ${playerName} is at ${playerHealth} health and ${monsterName} is at ${monsterHealth} health.`)
