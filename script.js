@@ -1,3 +1,5 @@
+//comment
+
 let playerName = prompt("Enter your name.")
 alert("Hello " + playerName + "!")
 
