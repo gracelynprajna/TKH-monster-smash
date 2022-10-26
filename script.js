@@ -1,30 +1,41 @@
-let playerName = prompt("Enter your name.")
-alert("Hello " + playerName + "!")
 
+//declare a variable named playerName
+const playerName = prompt("Enter your name.");
+
+
+alert("Hello " + playerName + "!");
+
+//declare a variable named playerHealth and set it equal to the number value 15
 let playerHealth = 15;
 
-let monsterName = 'Snorlax';
+//assign a name of a monster (ex:'Werewolf') as a string to a variable named monsterName
+const monsterName = "Snorlax";
 
+//declare a variable named monsterHealth and set it equal to the number value 15
 let monsterHealth = 15;
 
+//random integer function
 function randomNum(min, max) {
-    min = Math.ceil(min)
-    max = Math.floor(max)
-    return Math.floor(Math.random() * (max - min) + min) 
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
   }
+//Math.floor rounds down and Math.ceil round down
 
 
 function playerAttack(){
+//use randomNum to generate attack points value between 1-5 and save the value to a variable named playerAttackPoints 
 let playerAttackPoints = randomNum(1,6);
 monsterHealth = monsterHealth - playerAttackPoints;
-alert(`Player attacked monster and did ${playerAttackPoints} damage! Monster has ${monsterHealth} health left!`) 
+//OR you can put monsterHealth -=playerAttackPoints
+alert(`Player attacked monster and did ${playerAttackPoints} damage! Monster has ${monsterHealth} health left!`);
 }
 
 
 function monsterAttack(){
 let monsterAttackPoints = randomNum(1,6);
 playerHealth = playerHealth - monsterAttackPoints;
-alert(`Monster attacked player and did did ${monsterAttackPoints} damage! ${playerName} has ${playerHealth} health left!`)
+alert(`Monster attacked player and did did ${monsterAttackPoints} damage! ${playerName} has ${playerHealth} health left!`);
 }
 
 function playRound(){
